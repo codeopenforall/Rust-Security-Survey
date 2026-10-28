@@ -1,52 +1,65 @@
-# Rust Security & Verification Survey
+# Rust Security Research: A Curated Bibliography (2020–2025)
 
-A curated list of research papers on Rust programming language security, verification, and vulnerability detection.
+A curated, year-by-year bibliography of **133 peer-reviewed papers and preprints** on Rust security — vulnerability detection, static and dynamic analysis, fuzzing, formal verification, unsafe-code and FFI studies, concurrency bugs, and secure C-to-Rust translation.
 
-## Table of Contents
-- [Overview](#overview)
-- [Research Areas](#research-areas)
-- [Papers by Year](#papers-by-year)
-- [Contributing](#contributing)
-- [Citation Format](#citation-format)
+This list is the literature base for our systematic review, *A Systematic Review of Rust Vulnerability Detection and Security Analysis* (under review at ACM Computing Surveys), which covers 93 of these papers in depth. It is maintained by [Irfan Ali Khan](https://github.com/codeopenforall) (University of Missouri–Kansas City) with Yu Luo, Weifeng Xu and Dianxiang Xu, and originated in the [xiaory9512/RUST_Survey](https://github.com/xiaory9512/RUST_Survey) repository.
 
-## Overview
+## At a glance
 
-This repository maintains a comprehensive survey of academic research papers related to the Rust programming language, with a focus on: 
-- Security vulnerability detection
-- Type system analysis
-- Formal verification
-- Memory safety
-- Concurrency bugs
-(Concurrency bugs are one kind of vulnerability; formal verification is irrelevant to the other topics)
+| Year | Papers |
+| --- | ---: |
+| 2025 | 37 |
+| 2024 | 43 |
+| 2023 | 24 |
+| 2022 | 10 |
+| 2021 | 13 |
+| 2020 | 6 |
+| **Total** | **133** |
 
-**Total Papers:** X papers spanning 2020-2025
+Output is concentrated in 2024–2025, which together account for 60% of the list. Frequent venues include USENIX Security, OOPSLA, ASE, ICSE, ISSTA, TOSEM and arXiv preprints.
 
-## Research Areas
+## Scope
 
-### 🔍 Vulnerability Detection
-Papers focusing on identifying security vulnerabilities in Rust programs.
+Each entry gives the title (linked to the publisher or preprint), the author list, and the venue with year and pages, following the Chicago-style citations produced by Google Scholar. Topics covered:
 
-### ✅ Formal Verification
-Research on proving correctness of Rust code.
+- **Vulnerability detection** — static analyzers (MIR- and LLVM-level), taint analysis, pattern-based detectors, ML/GNN and LLM-based detectors
+- **Dynamic analysis and fuzzing** — targeted fuzzing of unsafe code, API test synthesis, sanitizer-based validation
+- **Formal verification** — automated proof generation, separation logic, CHC solving, ownership and borrowing models
+- **Unsafe Rust, FFI and type safety** — empirical studies of `unsafe`, cross-language boundaries, type confusion
+- **Concurrency and memory safety** — data races, deadlocks, use-after-free in safe and unsafe code
+- **Secure code translation** — C-to-Rust migration and its validation
 
-### 🔒 Type Safety
-Studies on type system bugs and type confusion.
+## Related work by the maintainers
 
-### ⚡ Concurrency & Memory Safety
-Papers analyzing concurrent programming and memory safety guarantees.
+| Paper | Artifact |
+| --- | --- |
+| *LLM-Based Data Generation and Augmentation for Rust Vulnerability Detection*, IEEE COMPSAC 2026 | [RUST-VGA](https://github.com/codeopenforall/RUSTVGA) — 8,480-program benchmark across 53 CWEs |
+| *Detecting Rust Code Vulnerabilities Through Transfer Learning*, IJSEKE 2026 | [Rust CVE dataset](https://github.com/codeopenforall/RUST) — 137 vulnerable / 136 benign samples |
+| *GNN-Based Transfer Learning and Tuning for Detecting Code Vulnerabilities across Different Programming Languages*, IEEE QRS 2024 | — |
+
+## Contributing
+
+Additions and corrections are welcome. Open a pull request that adds the entry under the right year, in the existing format, with a resolvable link to the paper. Please keep to work whose primary subject is Rust security or verification.
+
+## Citation
+
+If this bibliography is useful in your work, please cite the review it supports:
+
+```bibtex
+@article{khan2026rustsurvey,
+  title   = {A Systematic Review of Rust Vulnerability Detection and Security Analysis},
+  author  = {Khan, Irfan Ali and Luo, Yu and Xu, Weifeng and Xu, Dianxiang},
+  journal = {ACM Computing Surveys},
+  note    = {Under review},
+  year    = {2026}
+}
+```
 
 ---
 
-## Papers by Year
+## Papers by year
 
 ### 2025
-
-#### Type Confusion & Security
-
-# Rust Security Research Survey
-
-## 2025
-
 1. **[`TYPEPULSE: Detecting Type Confusion Bugs in Rust Programs`](https://www.usenix.org/conference/usenixsecurity25/presentation/chen-hung-mao)**  
    Chen, H.-M., He, X., Wang, S., Zhang, X., & Sun, K., *USENIX Security (2025)*  
    
@@ -474,29 +487,3 @@ Papers analyzing concurrent programming and memory safety guarantees.
    Zhang, Ziyi and Qin, Boqin and Chen, Yilun and Song, Linhai and Zhang, Yiying, *Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security, (2020), pp. 2085-2087* 
 
 
----
-
-## Statistics
-
-| Year | Number of Papers | Top Venues |
-|------|------------------|------------|
-| 2025 | 2 | USENIX Security, OOPSLA |
-| 2024 | TBD | TBD |
-| 2023 | TBD | TBD |
-| 2022 | TBD | TBD |
-| 2021 | TBD | TBD |
-| 2020 | TBD | TBD |
-
-## Research Trends
-
-- **Memory Safety:** X papers
-- **Type Systems:** X papers
-- **Formal Verification:** X papers
-- **Concurrency:** X papers
-
-## Citation Format
-
-All papers follow the Chicago citation format as provided by Google Scholar.
-
-To cite this repository:
-```bibtex
