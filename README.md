@@ -1,6 +1,6 @@
 # Rust Security Research: A Curated Bibliography (2020–2025)
 
-A curated, year-by-year bibliography of **133 peer-reviewed papers and preprints** on Rust security — vulnerability detection, static and dynamic analysis, fuzzing, formal verification, unsafe-code and FFI studies, concurrency bugs, and secure C-to-Rust translation.
+A curated, year-by-year bibliography of **133 peer-reviewed papers and preprints** on Rust security - vulnerability detection, static and dynamic analysis, fuzzing, formal verification, unsafe-code and FFI studies, concurrency bugs, and secure C-to-Rust translation.
 
 This list is the literature base for our systematic review, *A Systematic Review of Rust Vulnerability Detection and Security Analysis* (under review at ACM Computing Surveys), which covers 93 of these papers in depth. It is maintained by [Irfan Ali Khan](https://github.com/codeopenforall) (University of Missouri–Kansas City) with Yu Luo, Weifeng Xu and Dianxiang Xu, and originated in the [xiaory9512/RUST_Survey](https://github.com/xiaory9512/RUST_Survey) repository.
 
